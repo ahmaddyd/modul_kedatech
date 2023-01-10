@@ -28,6 +28,7 @@
         'views/views.xml',
         'views/templates.xml',
         'views/menu.xml',
+        'views/material_modul_views.xml',
         'views/supplier_views.xml',
     ],
     # only loaded in demonstration mode
