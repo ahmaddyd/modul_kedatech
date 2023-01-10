@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="inherit_res_partner_view_form" model="ir.ui.view">
+            <field name="name">res.partner.inherit.view.form</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="arch" type="xml">
+                <field name="vat" position="after">
+                    <field name="related_supplier"/>
+                </field>
+            </field>
+        </record>
+
+        <record id="related_supplier_action" model="ir.actions.act_window">
+            <field name="name">Supplier</field>
+            <field name="res_model">res.partner</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[('related_supplier','=',True)]</field>
+            <field name="context">{'default_related_supplier':True}</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Silakan isi nama Supplier
+                </p>
+            </field>
+        </record>
+    </data>
+
+    <menuitem id="related_supplier_menu_act" name="Supplier" action="related_supplier_action" parent="supplier_categ"
+              sequence="10"/>
+</odoo>
