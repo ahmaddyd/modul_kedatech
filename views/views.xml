@@ -1,60 +1,60 @@
 <odoo>
-  <data>
-    <!-- explicit list view definition -->
-<!--
-    <record model="ir.ui.view" id="modul_kedatech.list">
-      <field name="name">modul_kedatech list</field>
-      <field name="model">modul_kedatech.modul_kedatech</field>
-      <field name="arch" type="xml">
-        <tree>
-          <field name="name"/>
-          <field name="value"/>
-          <field name="value2"/>
-        </tree>
-      </field>
-    </record>
--->
+    <data>
+        <!-- explicit list view definition -->
+        <!--
+            <record model="ir.ui.view" id="modul_kedatech.list">
+              <field name="name">modul_kedatech list</field>
+              <field name="model">modul_kedatech.modul_kedatech</field>
+              <field name="arch" type="xml">
+                <tree>
+                  <field name="name"/>
+                  <field name="value"/>
+                  <field name="value2"/>
+                </tree>
+              </field>
+            </record>
+        -->
 
-    <!-- actions opening views on models -->
-<!--
-    <record model="ir.actions.act_window" id="modul_kedatech.action_window">
-      <field name="name">modul_kedatech window</field>
-      <field name="res_model">modul_kedatech.modul_kedatech</field>
-      <field name="view_mode">tree,form</field>
-    </record>
--->
+        <!-- actions opening views on models -->
+        <!--
+            <record model="ir.actions.act_window" id="modul_kedatech.action_window">
+              <field name="name">modul_kedatech window</field>
+              <field name="res_model">modul_kedatech.modul_kedatech</field>
+              <field name="view_mode">tree,form</field>
+            </record>
+        -->
 
-    <!-- server action to the one above -->
-<!--
-    <record model="ir.actions.server" id="modul_kedatech.action_server">
-      <field name="name">modul_kedatech server</field>
-      <field name="model_id" ref="model_modul_kedatech_modul_kedatech"/>
-      <field name="state">code</field>
-      <field name="code">
-        action = {
-          "type": "ir.actions.act_window",
-          "view_mode": "tree,form",
-          "res_model": model._name,
-        }
-      </field>
-    </record>
--->
+        <!-- server action to the one above -->
+        <!--
+            <record model="ir.actions.server" id="modul_kedatech.action_server">
+              <field name="name">modul_kedatech server</field>
+              <field name="model_id" ref="model_modul_kedatech_modul_kedatech"/>
+              <field name="state">code</field>
+              <field name="code">
+                action = {
+                  "type": "ir.actions.act_window",
+                  "view_mode": "tree,form",
+                  "res_model": model._name,
+                }
+              </field>
+            </record>
+        -->
 
-    <!-- Top menu item -->
-<!--
-    <menuitem name="modul_kedatech" id="modul_kedatech.menu_root"/>
--->
-    <!-- menu categories -->
-<!--
-    <menuitem name="Menu 1" id="modul_kedatech.menu_1" parent="modul_kedatech.menu_root"/>
-    <menuitem name="Menu 2" id="modul_kedatech.menu_2" parent="modul_kedatech.menu_root"/>
--->
-    <!-- actions -->
-<!--
-    <menuitem name="List" id="modul_kedatech.menu_1_list" parent="modul_kedatech.menu_1"
-              action="modul_kedatech.action_window"/>
-    <menuitem name="Server to list" id="modul_kedatech" parent="modul_kedatech.menu_2"
-              action="modul_kedatech.action_server"/>
--->
-  </data>
+        <!-- Top menu item -->
+        <!--
+            <menuitem name="modul_kedatech" id="modul_kedatech.menu_root"/>
+        -->
+        <!-- menu categories -->
+        <!--
+            <menuitem name="Menu 1" id="modul_kedatech.menu_1" parent="modul_kedatech.menu_root"/>
+            <menuitem name="Menu 2" id="modul_kedatech.menu_2" parent="modul_kedatech.menu_root"/>
+        -->
+        <!-- actions -->
+        <!--
+            <menuitem name="List" id="modul_kedatech.menu_1_list" parent="modul_kedatech.menu_1"
+                      action="modul_kedatech.action_window"/>
+            <menuitem name="Server to list" id="modul_kedatech" parent="modul_kedatech.menu_2"
+                      action="modul_kedatech.action_server"/>
+        -->
+    </data>
 </odoo>
