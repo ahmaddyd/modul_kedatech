@@ -1,2 +1,2 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_modul_kedatech_modul_kedatech,modul_kedatech.modul_kedatech,model_modul_kedatech_modul_kedatech,base.group_user,1,1,1,1
+access_kedatech_material,kedatech.material,model_kedatech_material,base.group_user,1,1,1,1
