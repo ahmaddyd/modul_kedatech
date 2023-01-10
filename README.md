@@ -3,6 +3,8 @@
 
 [![forthebadge made-with-python](http://ForTheBadge.com/images/badges/made-with-python.svg)](https://www.python.org/)
 
+![image.png](https://github.com/ahmaddyd/modul_kedatech/blob/master/ERD/ERD%20Material%20-%20Supplier.png)
+
 Kebutuhan client adalah membuat sebuah modul Odoo yang didalamnya berfungsi
 untuk melakukan registrasi material yang akan dijual. Informasi yang harus dibutuhkan
 client adalah:
