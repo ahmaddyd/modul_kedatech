@@ -24,6 +24,7 @@ client adalah:
 berdasarkan Material Type
 2. Melakukan update terhadap satu material
 3. Melakukan delete terhadap satu material
+4. Fitur printout untuk mencetak invoice
 
 ## Tech
 - [Odoo](https://nightly.odoo.com/) - Using an Odoo nightly repository, you will be able to install and upgrade Odoo with the help of your traditional package manager (apt or yum).
