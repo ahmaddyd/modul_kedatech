@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright 2019 Coop IT Easy
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
+-->
+<odoo>
+    <data>
+        <record id="material_modul_kedatech_view_tree" model="ir.ui.view">
+            <field name="name">Material Kedatech Tree</field>
+            <field name="model">kedatech.material</field>
+            <field name="type">tree</field>
+
+            <field name="arch" type="xml">
+                <tree string="Material Kedatech">
+                    <field name="material_code"/>
+                    <field name="material_name"/>
+                    <field name="material_type"/>
+                    <field name="material_buy_price"/>
+                    <field name="supplier_id"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="material_modul_kedatech_view_form" model="ir.ui.view">
+            <field name="name">Material Kedatech Form</field>
+            <field name="model">kedatech.material</field>
+            <field name="type">form</field>
+
+            <field name="arch" type="xml">
+                <form string="Form Kedatech">
+                    <sheet>
+                        <group string="Material Kedatech">
+                            <field name="material_code"/>
+                            <field name="material_name"/>
+                            <field name="material_type"/>
+                            <field name="material_buy_price"/>
+                            <field name="supplier_id" widget="many2one_tags"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="material_modul_kedatech_view_kanban" model="ir.ui.view">
+            <field name="name">Material Kedatech</field>
+            <field name="model">kedatech.material</field>
+            <field name="arch" type="xml">
+                <kanban class="o_kanban_mobile">
+                    <!-- Add your fields here -->
+                    <field name="material_code"/>
+                    <field name="material_name"/>
+                    <field name="material_type"/>
+                    <field name="material_buy_price"/>
+                    <field name="supplier_id"/>
+                    <templates>
+                        <t t-name="kanban-box">
+                            <div t-attf-class="oe_kanban_card oe_kanban_global_click">
+                                <div class="oe_kanban_details">
+                                    <strong>
+                                        <label for="material_code">Material Code:</label>
+                                        <field name="material_code"/>
+                                    </strong>
+                                </div>
+                                <div class="oe_kanban_details">
+                                    <strong>
+                                        <label for="material_name">Material Name:</label>
+                                        <field name="material_name"/>
+                                    </strong>
+                                </div>
+                                <div class="oe_kanban_details">
+                                    <strong>
+                                        <label for="material_type">Material Type:</label>
+                                        <field name="material_type"/>
+                                    </strong>
+                                </div>
+                                <div class="oe_kanban_details">
+                                    <strong>
+                                        <label for="material_buy_price">Material Buy Price:</label>
+                                        <field name="material_buy_price"/>
+                                    </strong>
+                                </div>
+                                <div class="oe_kanban_details">
+                                    <strong>
+                                        <label for="supplier_id">Supplier:</label>
+                                        <field name="supplier_id"/>
+                                    </strong>
+                                </div>
+                            </div>
+                        </t>
+                    </templates>
+                </kanban>
+            </field>
+        </record>
+
+        <record id="material_modul_kedatech_action" model="ir.actions.act_window">
+            <field name="name">Material Kedatech</field>
+            <field name="res_model">kedatech.material</field>
+            <field name="view_mode">tree,form,kanban</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Silakan isi Material terlebih dahulu
+                </p>
+            </field>
+        </record>
+
+        <!-- This Menu Item must have a parent and an action -->
+        <menuitem
+                id="material_modul_kedatech_menu_act"
+                name="Material Kedatech"
+                parent="material_categ"
+                action="material_modul_kedatech_action"
+                sequence="10"/>
+    </data>
+</odoo>
