@@ -30,6 +30,8 @@
         'views/menu.xml',
         'views/material_modul_views.xml',
         'views/supplier_views.xml',
+        'report/report.xml',
+        'report/material_invoice.xml',
     ],
     # only loaded in demonstration mode
     'demo': [
