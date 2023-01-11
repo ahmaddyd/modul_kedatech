@@ -14,3 +14,9 @@ class MaterialKedatech(models.Model):
     )
     material_buy_price = fields.Integer(string='Material Buy Price', required=True)
     supplier_id = fields.Many2one('res.partner', string='Supplier', required=True)
+
+    @api.constrains('material_buy_price')
+    def _check_material_buy_price(self):
+        for record in self:
+            if record.material_buy_price < 100:
+                raise ValidationError("Material buy price tidak boleh kurang dari 100")
